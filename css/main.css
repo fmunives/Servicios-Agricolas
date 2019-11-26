@@ -1,0 +1,135 @@
+:root {
+  --color-primary: #209959;
+  --color-secondary: #68cc97;
+  --color-tertiary: #a7ff9c;
+  --color-quarter: #fcdbff;
+  --z-small: 10;
+  --z-medium: 100;
+  --z-large: 1000;
+  --z-xlarge: 10000;
+}
+
+* {
+  box-sizing: border-box;
+  border: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-quarter);
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+.menu-principal {
+  width: 100%;
+  min-height: 68px;
+  border-bottom: 1px solid var(--color-primary);
+  padding: 0 36px;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: var(--z-medium);
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-logo {
+  display: inline-block;
+}
+
+.menu-nav {
+  list-style: none;
+  display: flex;
+}
+
+.menu-nav a {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 10px;
+  font-weight: 500;
+  font-size: 0.876rem;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  transition: all 0.3s ease;
+}
+
+.menu-iconos a {
+  display: inline-block;
+  padding: 0 10px;
+  font-size: 0.876rem;
+  letter-spacing: 0;
+  line-height: 1.5em;
+  transition: all 0.3s ease;
+}
+
+.menu-movil {
+  display: none;
+}
+
+.menu-movil .menu-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-clon {
+  display: none;
+}
+
+/* main section */
+
+/* banner */
+
+.main {
+  width: 100%;
+  margin-top: -68px;
+}
+
+.banner-principal {
+  position: relative;
+  width: 100%;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  background: url('../img/banner.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.texto-banner {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
