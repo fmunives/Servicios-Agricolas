@@ -3,6 +3,10 @@
   --color-secondary: #68cc97;
   --color-tertiary: #a7ff9c;
   --color-quarter: #fcdbff;
+  --color-white: #fff;
+  --color-black: #444444;
+  --color-grey: rgba(204, 204, 204, 0.5);
+  --color-black-shadow: rgba(0, 0, 0, 0.2);
   --z-small: 10;
   --z-medium: 100;
   --z-large: 1000;
@@ -28,10 +32,6 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', sans-serif;
-}
-
-h1 {
-  font-size: 4rem;
 }
 
 a {
@@ -98,7 +98,20 @@ a:hover {
 }
 
 .menu-clon {
-  display: none;
+  width: 100%;
+  min-height: 68px;
+  border-bottom: 1px solid var(--color-primary);
+  padding: 0 36px;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: var(--z-large);
+  transition: all 0.4s ease;
+  margin-top: -68px;
 }
 
 /* main section */
@@ -132,4 +145,97 @@ a:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.texto-banner h1 {
+  font-size: 4rem;
+  color: var(--color-white);
+
+  margin: 0;
+}
+
+.texto-banner h2 {
+  color: var(--color-white);
+  font-size: 4rem;
+  margin: 10px 0;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 1px 1px var(--color-secondary);
+}
+
+.texto-banner h3 {
+  color: var(--color-quarter);
+  margin-top: -10px;
+  margin-bottom: 50px;
+  font-weight: 200;
+}
+
+.texto-banner a {
+  display: inline-block;
+  background-color: var(--color-primary);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.texto-banner a:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  transition: all 0.5s ease;
+}
+
+/*  */
+
+@media screen and (max-width: 900px) {
+  a {
+    color: var(--color-black);
+  }
+  .menu-principal {
+    display: none;
+  }
+
+  .menu-movil {
+    display: block;
+    width: 100%;
+    padding: 5px 18px;
+    background-color: var(--color-white);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--z-small);
+  }
+
+  .barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .barra a i {
+    font-size: 1.4rem;
+  }
+
+  .menu-logo {
+    width: 40px;
+  }
+
+  .menu-logo img {
+    width: 100%;
+  }
+
+  .mobil-menu {
+    width: 80%;
+    display: block;
+    position: fixed;
+    top: 53px;
+    left: -100%;
+    border-bottom: 1px solid var(--color-grey);
+    border-right: 1px solid var(--color-grey);
+    box-shadow: 0px 1px 5px -1px var(--color-black-shadow);
+    background: var(--color-white);
+    text-align: center;
+  }
+
+  .texto-banner h2 {
+    font-size: 2rem;
+  }
 }
