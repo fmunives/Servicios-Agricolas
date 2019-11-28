@@ -7,6 +7,7 @@
   --color-black: #444444;
   --color-grey: rgba(204, 204, 204, 0.5);
   --color-black-shadow: rgba(0, 0, 0, 0.2);
+  --color-green-shadow: rgba(168, 223, 255, 0.3);
   --z-small: 10;
   --z-medium: 100;
   --z-large: 1000;
@@ -39,6 +40,16 @@ a {
   text-decoration: none;
   text-transform: uppercase;
   color: var(--color-quarter);
+}
+
+.container {
+  width: 95%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.flex {
+  display: flex;
 }
 
 a:hover {
@@ -75,6 +86,7 @@ a:hover {
   font-weight: 500;
   font-size: 0.876rem;
   letter-spacing: 0;
+  font-weight: 700;
   line-height: 1.5em;
   transition: all 0.3s ease;
 }
@@ -141,6 +153,7 @@ a:hover {
 .texto-banner {
   position: absolute;
   display: inline-block;
+  width: 90%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -148,15 +161,17 @@ a:hover {
 }
 
 .texto-banner h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   color: var(--color-white);
-
-  margin: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  letter-spacing: 20px;
+  font-family: 'Bebas Neue', cursive;
 }
 
 .texto-banner h2 {
   color: var(--color-white);
-  font-size: 4rem;
+  font-size: 3rem;
   margin: 10px 0;
   font-family: 'Dancing Script', cursive;
   text-shadow: 1px 1px var(--color-secondary);
@@ -164,9 +179,11 @@ a:hover {
 
 .texto-banner h3 {
   color: var(--color-quarter);
-  margin-top: -10px;
+  margin-top: -20px;
+  padding-top: 0;
   margin-bottom: 50px;
   font-weight: 200;
+  text-shadow: 1px 1px var(--color-black);
 }
 
 .texto-banner a {
@@ -182,7 +199,58 @@ a:hover {
   transition: all 0.5s ease;
 }
 
-/*  */
+.proyectos {
+  background-color: var(--color-green-shadow);
+}
+
+.titulo-seccion {
+  text-align: center;
+}
+
+.titulo-seccion h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 3.125rem;
+}
+
+.titulo-seccion p {
+  padding-top: 0;
+  color: var(--color-secondary);
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-bottom: 4%;
+}
+
+.galeria-proyectos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--color-secondary);
+}
+
+.proyecto {
+  width: 32%;
+  cursor: pointer;
+  margin-bottom: 2%;
+}
+
+.proyecto img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* nosotros */
+.nosotros {
+  background-color: var(--color-green-shadow);
+}
+.texto-nosotros {
+  width: 60%;
+}
 
 @media screen and (max-width: 900px) {
   a {
