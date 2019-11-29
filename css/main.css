@@ -7,7 +7,7 @@
   --color-black: #444444;
   --color-grey: rgba(204, 204, 204, 0.5);
   --color-black-shadow: rgba(0, 0, 0, 0.2);
-  --color-green-shadow: rgba(168, 223, 255, 0.3);
+  --color-green-shadow: rgba(231, 232, 233, 0.5);
   --z-small: 10;
   --z-medium: 100;
   --z-large: 1000;
@@ -24,6 +24,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
+  background-color: var(--color-white);
 }
 
 h1,
@@ -43,7 +44,7 @@ a {
 }
 
 .container {
-  width: 95%;
+  width: 90%;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -199,9 +200,7 @@ a:hover {
   transition: all 0.5s ease;
 }
 
-.proyectos {
-  background-color: var(--color-green-shadow);
-}
+/* proyectos */
 
 .titulo-seccion {
   text-align: center;
@@ -245,11 +244,121 @@ a:hover {
 }
 
 /* nosotros */
-.nosotros {
-  background-color: var(--color-green-shadow);
-}
+
 .texto-nosotros {
   width: 60%;
+}
+
+/* slide */
+.contenedor-slider {
+  width: 100%;
+  position: relative;
+  padding: 54px 0;
+  overflow: hidden;
+}
+
+.slider {
+  width: 400%;
+}
+
+.slide {
+  width: 15%;
+  max-width: 950px;
+  margin-right: 0.7%;
+  /* box-shadow: 1px 2px 5px #aaa; */
+}
+
+.slide img {
+  width: 100%;
+  vertical-align: top;
+}
+
+.btn-anterior {
+  left: 2%;
+}
+
+.btn-anterior i,
+.btn-siguiente i {
+  color: var(--color-white);
+  transition: all 0.4s ease;
+}
+.btn-anterior i:hover,
+.btn-siguiente i:hover {
+  color: var(--color-primary);
+}
+
+.btn-siguiente {
+  right: 2%;
+}
+
+.btn-anterior,
+.btn-siguiente {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+/* equipo */
+
+.nuestro-equipo {
+  padding: 55px 0;
+}
+
+.equipo {
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.persona-equipo {
+  padding: 50px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0px 9px 15px -1px rgba(2, 121, 2, 0.2);
+  text-align: center;
+  border: 1px solid var(--color-tertiary);
+  border-radius: 5px;
+}
+
+.persona-equipo:first-child,
+.persona-equipo:last-child {
+  position: relative;
+  top: 20px;
+}
+
+.foto {
+  width: 50%;
+  max-width: 100px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.foto img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.texto h3 {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.texto h4 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: var(--color-secondary);
+  margin-top: 0;
+}
+
+.texto p {
+  font-size: 0.9rem;
+  color: var(--color-black);
+  font-weight: 400;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 900px) {
