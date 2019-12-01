@@ -878,6 +878,10 @@ footer {
 
   /* equipo */
 
+  .persona-equipo .foto {
+    margin-right: 0;
+  }
+
   .persona-equipo {
     max-width: 100%;
     display: flex;
