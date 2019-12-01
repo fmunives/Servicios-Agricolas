@@ -1,18 +1,23 @@
 :root {
   --color-primary: #209959;
+  --color-primary2: #41543b;
   --color-secondary: #68cc97;
   --color-tertiary: #a7ff9c;
-  --color-quarter: #fcdbff;
+  --color-quarter: #868286;
   --color-white: #fff;
   --color-black: #67997c;
   --color-black2: #444444;
   --color-grey: rgba(204, 204, 204, 0.5);
+  --color-brown: #271d1d;
+  --color-brown-shadow: rgba(15, 11, 11, 0.6);
   --color-black-shadow: rgba(0, 0, 0, 0.2);
   --color-green-shadow: rgba(231, 232, 233, 0.5);
   --z-small: 10;
   --z-medium: 100;
   --z-large: 1000;
   --z-xlarge: 10000;
+  --font-primary: 'Bebas Neue', cursive;
+  --font-secondary: 'Lato', sans-serif;
 }
 
 * {
@@ -24,7 +29,7 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-secondary);
   font-size: 16px;
   background-color: var(--color-green-shadow);
 }
@@ -35,7 +40,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-secondary);
 }
 
 a {
@@ -47,6 +52,7 @@ a {
 
 p {
   font-size: 0.9rem;
+  line-height: 1.8em;
 }
 
 .container {
@@ -92,7 +98,6 @@ p {
 .menu-principal {
   width: 100%;
   min-height: 68px;
-  border-bottom: 1px solid var(--color-primary);
   padding: 0 36px;
   background-color: transparent;
   display: flex;
@@ -100,7 +105,7 @@ p {
   align-items: center;
   z-index: var(--z-medium);
   position: relative;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: var(--color-brown-shadow);
 }
 
 .menu-nav {
@@ -128,7 +133,7 @@ p {
 }
 
 .menu-logo {
-  width: 70px;
+  width: 80px;
   display: inline-block;
 }
 
@@ -162,9 +167,9 @@ p {
 .menu-clon {
   width: 100%;
   min-height: 68px;
-  border-bottom: 1px solid var(--color-grey);
+  /* border-bottom: 1px solid var(--color-grey); */
   padding: 0 36px;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary2);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -213,7 +218,7 @@ p {
 .banner {
   width: 100%;
   height: 100vh;
-  background: url('https://github.com/fmunives/Servicios-Agricolas/blob/master/img/banner4.jpg?raw=true');
+  background: url('../img/banner6.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -234,11 +239,12 @@ p {
   font-size: 5rem;
   color: var(--color-white);
   margin-bottom: 0;
-  margin-top: 0;
+  margin-top: 180px;
   padding-bottom: 0;
+  padding-top: 50px;
   letter-spacing: 40px;
   text-align: center;
-  font-family: 'Bebas Neue', cursive;
+  font-family: var(--font-primary);
   /* margin-right: -60px; */
 }
 
@@ -246,17 +252,16 @@ p {
   color: var(--color-white);
   font-size: 3rem;
   margin: 10px 0;
-  font-family: 'Dancing Script', cursive;
-  text-shadow: 1px 1px var(--color-secondary);
+  margin-top: 100px;
+  font-family: var(--font-secondary);
 }
 
 .texto-banner h3 {
-  color: var(--color-quarter);
+  color: var(--color-tertiary);
   margin-top: -10px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   padding-top: 0;
   letter-spacing: 5px;
-  text-shadow: 1px 1px var(--color-black);
 }
 
 .link-banner {
@@ -268,9 +273,9 @@ p {
   display: inline-block;
   background-color: var(--color-primary);
   padding: 10px;
-  border: 1px solid var(--color-primary);
+  /* border: 1px solid var(--color-primary); */
   transition: all 0.5s ease;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .texto-banner a:hover {
@@ -539,7 +544,7 @@ p {
 }
 
 .info-extra {
-  background-color: #191919;
+  background-color: var(--color-brown);
   padding: 130px 0;
 }
 
@@ -623,7 +628,7 @@ textarea {
   color: var(--color-black);
   font-size: 0.9rem;
   letter-spacing: 0.5px;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font-secondary);
   margin-bottom: 10px;
   max-width: 100%;
 }
@@ -754,7 +759,7 @@ footer {
     font-size: 1.4rem;
   }
   .menu-logo {
-    width: 40px;
+    width: 60px;
     display: inline-block;
   }
 
@@ -763,10 +768,10 @@ footer {
   }
 
   .mobil-menu {
-    width: 80%;
+    width: 100%;
     display: block;
     position: fixed;
-    top: 42px;
+    top: 54px;
     right: -100%;
     border-bottom: 1px solid var(--color-grey);
     border-right: 1px solid var(--color-grey);
@@ -778,7 +783,7 @@ footer {
   .mobil-menu .menu-nav a {
     display: block;
     border-bottom: 1px solid var(--color-grey);
-    padding: 7px 0;
+    padding: 10px 0;
     height: auto;
     color: var(--color-white);
   }
