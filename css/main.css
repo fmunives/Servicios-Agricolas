@@ -252,7 +252,7 @@ p {
 
 .texto-banner h3 {
   color: var(--color-quarter);
-  margin-top: -20px;
+  margin-top: -10px;
   margin-bottom: 100px;
   padding-top: 0;
   letter-spacing: 5px;
@@ -864,6 +864,16 @@ footer {
 
   .galeria-proyectos .proyecto {
     width: 49%;
+  }
+
+  .proyectos .titulo-seccion {
+    padding-top: 0;
+    margin-top: -40px;
+    margin-bottom: 10px;
+  }
+
+  .proyectos .titulo-seccion p {
+    margin-bottom: 30px;
   }
 
   /* equipo */
