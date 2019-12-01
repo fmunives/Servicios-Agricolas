@@ -24,7 +24,7 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-  background-color: var(--color-white);
+  background-color: var(--color-green-shadow);
 }
 
 h1,
@@ -40,12 +40,12 @@ a {
   cursor: pointer;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-quarter);
+  color: var(--color-white);
 }
 
 .container {
   width: 90%;
-  max-width: 1300px;
+  max-width: 1080px;
   margin: 0 auto;
 }
 
@@ -53,8 +53,47 @@ a {
   display: flex;
 }
 
+.text-center {
+  text-align: center;
+}
+
 a:hover {
-  color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+.btn-volver-arriba {
+  display: inline-block;
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 30%;
+  bottom: 20px;
+  right: -60px;
+  z-index: var(--z-xlarge);
+  transition: all 0.4s ease;
+  background-color: var(--color-tertiary);
+  border: 1px solid var(--color-tertiary);
+}
+
+.btn-volver-arriba:hover {
+  background-color: var(--color-white);
+}
+
+.volver-arriba {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.volver-arriba:hover {
+  color: var(--color-tertiary);
+}
+
+.volver-arriba i {
+  font-size: 1rem;
+  line-height: 40px;
 }
 
 .menu-principal {
@@ -68,28 +107,39 @@ a:hover {
   align-items: center;
   z-index: var(--z-medium);
   position: relative;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.menu-logo {
-  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .menu-nav {
   list-style: none;
   display: flex;
+  z-index: var(--z-large);
 }
 
 .menu-nav a {
   display: inline-block;
   cursor: pointer;
   padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
   font-weight: 500;
   font-size: 0.876rem;
   letter-spacing: 0;
   font-weight: 700;
-  line-height: 1.5em;
   transition: all 0.3s ease;
+}
+
+.menu-nav a:hover {
+  background-color: var(--color-white);
+}
+
+.menu-logo {
+  width: 70px;
+  display: inline-block;
+}
+
+.menu-logo img {
+  width: 100%;
 }
 
 .menu-iconos a {
@@ -99,6 +149,7 @@ a:hover {
   letter-spacing: 0;
   line-height: 1.5em;
   transition: all 0.3s ease;
+  z-index: var(--z-large);
 }
 
 .menu-movil {
@@ -113,9 +164,9 @@ a:hover {
 .menu-clon {
   width: 100%;
   min-height: 68px;
-  border-bottom: 1px solid var(--color-primary);
+  border-bottom: 1px solid var(--color-grey);
   padding: 0 36px;
-  background-color: var(--color-white);
+  background-color: var(--color-secondary);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -125,6 +176,26 @@ a:hover {
   z-index: var(--z-large);
   transition: all 0.4s ease;
   margin-top: -68px;
+}
+
+.menu-clon .menu-nav a {
+  color: var(--color-white);
+  display: inline-block;
+  padding: 0 10px;
+  height: 30px;
+  line-height: 30px;
+}
+
+.menu-clon .menu-iconos a {
+  color: var(--color-white);
+}
+.menu-clon .menu-iconos a:hover {
+  color: var(--color-primary);
+}
+
+.menu-clon .menu-nav a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
 }
 
 /* main section */
@@ -144,7 +215,7 @@ a:hover {
 .banner {
   width: 100%;
   height: 100vh;
-  background: url('../img/banner.jpg');
+  background: url('../img/banner4.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -165,9 +236,11 @@ a:hover {
   font-size: 5rem;
   color: var(--color-white);
   margin-bottom: 0;
+  margin-top: 0;
   padding-bottom: 0;
-  letter-spacing: 20px;
+  letter-spacing: 60px;
   font-family: 'Bebas Neue', cursive;
+  margin-right: -60px;
 }
 
 .texto-banner h2 {
@@ -181,26 +254,36 @@ a:hover {
 .texto-banner h3 {
   color: var(--color-quarter);
   margin-top: -20px;
+  margin-bottom: 100px;
   padding-top: 0;
-  margin-bottom: 50px;
   font-weight: 200;
   text-shadow: 1px 1px var(--color-black);
+}
+
+.link-banner {
+  justify-content: center;
+  align-items: center;
 }
 
 .texto-banner a {
   display: inline-block;
   background-color: var(--color-primary);
   padding: 10px;
-  border-radius: 10px;
+  border: 1px solid var(--color-primary);
+  transition: all 0.5s ease;
+  font-size: 1.3rem;
 }
 
 .texto-banner a:hover {
   background-color: var(--color-white);
   color: var(--color-primary);
-  transition: all 0.5s ease;
 }
 
 /* proyectos */
+
+.proyectos {
+  padding: 108px 0 54px 0;
+}
 
 .titulo-seccion {
   text-align: center;
@@ -265,7 +348,7 @@ a:hover {
   width: 15%;
   max-width: 950px;
   margin-right: 0.7%;
-  /* box-shadow: 1px 2px 5px #aaa; */
+  box-shadow: 1px 20px 40px #aaa;
 }
 
 .slide img {
@@ -308,7 +391,7 @@ a:hover {
 
 .equipo {
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .persona-equipo {
@@ -361,7 +444,213 @@ a:hover {
   margin-bottom: 0;
 }
 
+/* info extra */
+
+.info-extra .container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.info {
+  width: 50%;
+  padding-right: 15px;
+}
+
+.contenido-info {
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.contenido-info:first-child {
+  margin-bottom: 30px;
+}
+
+.info-extra {
+  background-color: #191919;
+  padding: 130px 0;
+}
+
+.icono-info {
+  width: 5%;
+}
+
+.icono-info i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.texto-info {
+  padding-left: 3%;
+}
+
+.texto-info h4 {
+  font-size: 1.5rem;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--color-white);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.texto-info p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #979797;
+}
+
+.info-extra .container .photo {
+  width: 50%;
+  height: 345px;
+  background-image: url('../img/info-photo.jpg');
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.5);
+}
+
+/* contacto */
+.contacto {
+  background-image: url('../img/contact-photo.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 120px 0;
+}
+
+.container-contacto {
+  background-color: var(--color-white);
+  min-height: 485px;
+  border-radius: 3px;
+  box-shadow: 0px 9px 32px -1px rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+}
+
+.form {
+  width: 50%;
+  padding: 70px;
+}
+
+.form h2 {
+  font-size: 1.375rem;
+  line-height: 24px;
+  color: var(--color-primary);
+}
+
+.form p {
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  padding: 10px 0;
+  outline: none;
+  width: 100%;
+  border-bottom: 1px solid var(--color-tertiary);
+  color: var(--color-black);
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+  max-width: 100%;
+}
+
+textarea {
+  min-height: 88px;
+  max-height: 88px;
+}
+
+input[type='submit'] {
+  width: 100%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  padding: 8px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+input[type='submit']:hover {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+}
+
+.contacto-photo {
+  width: 50%;
+  background-image: url('../img/contact-message.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* footer */
+
+footer {
+  color: var(--color-secondary);
+  padding: 50px;
+}
+
+.footer-icons i {
+  color: var(--color-secondary);
+  padding: 0 10px;
+}
+
+.footer-icons i:hover {
+  color: var(--color-primary);
+}
+
+@media screen and (max-width: 1040px) {
+  /* banner */
+  .link-banner a {
+    color: var(--color-white);
+  }
+  /* equipo */
+
+  .equipo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .persona-equipo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .persona-equipo .foto {
+    margin-right: 30px;
+  }
+
+  .persona-equipo .texto h3 {
+    margin-top: 0;
+  }
+
+  .persona-equipo:first-child {
+    margin-bottom: 40px;
+  }
+
+  /* info-extra */
+  .info {
+    width: 100%;
+  }
+
+  .info-extra .container .photo {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 900px) {
+  /* menu */
+
+  .menu-clon {
+    display: none;
+  }
   a {
     color: var(--color-black);
   }
@@ -374,7 +663,6 @@ a:hover {
     width: 100%;
     padding: 5px 18px;
     background-color: var(--color-white);
-
     position: fixed;
     top: 0;
     left: 0;
@@ -390,9 +678,9 @@ a:hover {
   .barra a i {
     font-size: 1.4rem;
   }
-
   .menu-logo {
     width: 40px;
+    display: inline-block;
   }
 
   .menu-logo img {
@@ -403,16 +691,119 @@ a:hover {
     width: 80%;
     display: block;
     position: fixed;
-    top: 53px;
-    left: -100%;
+    top: 42px;
+    right: -100%;
     border-bottom: 1px solid var(--color-grey);
     border-right: 1px solid var(--color-grey);
     box-shadow: 0px 1px 5px -1px var(--color-black-shadow);
-    background: var(--color-white);
+    background: var(--color-secondary);
     text-align: center;
+  }
+
+  .mobil-menu .menu-nav a {
+    display: block;
+    border-bottom: 1px solid var(--color-grey);
+    padding: 10px 0;
+    height: auto;
+    color: var(--color-white);
+  }
+
+  .mobil-menu .menu-nav a:hover {
+    color: var(--color-secondary);
+  }
+
+  .mobil-menu .menu-nav a:last-child {
+    border-bottom: none;
+  }
+
+  .mobil-menu .menu-nav {
+    margin: 0;
   }
 
   .texto-banner h2 {
     font-size: 2rem;
+  }
+
+  /* nosotros */
+
+  .nosotros .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .texto-nosotros {
+    width: 100%;
+  }
+
+  /* contacto */
+
+  .form {
+    width: 1000%;
+  }
+
+  .form h2,
+  .form p {
+    text-align: center;
+  }
+
+  .contacto-photo {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  /* banner */
+  .texto-banner h1 {
+    font-size: 4rem;
+    letter-spacing: 40px;
+    margin-right: -40px;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .titulo-seccion h2 {
+    font-size: 2rem;
+  }
+
+  .titulo-seccion p {
+    font-size: 0.9rem;
+  }
+
+  /* proyectos */
+
+  .galeria-proyectos .proyecto {
+    width: 49%;
+  }
+
+  /* equipo */
+
+  .persona-equipo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* info-extra */
+  .contenido-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+  }
+
+  .icono-info {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .icono-info i {
+    font-size: 3.5rem;
   }
 }

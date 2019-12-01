@@ -16,57 +16,62 @@
 </head>
 
 <body>
+  <div class="btn-volver-arriba" id="btnVolverArriba">
+    <a class="volver-arriba" href="">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </div>
   <header>
     <!-- versión movil -->
     <div class="menu-movil" id="menuMovil">
       <div class="barra">
-        <a href="#" class="menu-logo">
-          <img src="./img/sefaa-logo.png" alt="SEFAA">
+        <a href="#home" class="menu-logo">
+          <img src="./img/logo.png" alt="SEFAA">
         </a>
-        <a href="" id="btnMenu">
+        <a href="#menuMovilNav" id="btnMenu">
           <li class="fas fa-bars"></li>
         </a>
       </div>
-      <nav class="mobil-menu">
+      <nav class="mobil-menu" id="menuMovilNav">
         <ul class="menu-nav">
-          <a href="#">
-            <li>Inicio</li>
+          <a href="#home" class="scroll-suave">
+            Inicio
           </a>
-          <a href="#servicios">
-            <li>Servicios</li>
+          <a href="#proyectos" class="scroll-suave">
+            Proyectos
           </a>
-          <a href="#comercializacion">
-            <li>Comercialización</li>
+          <a href="#acercaDe" class="scroll-acercaDe">
+            Acerca de
           </a>
-          <a href="#nosotros">
-            <li>Nosotros</li>
+          <a href="#equipo" class="scroll-suave">
+            Nuestro equipo
           </a>
-          <a href="#contacto">
-            <li>Contacto</li>
+          <a href="#contacto" class="scroll-suave">
+            Contacto
           </a>
         </ul>
       </nav>
     </div>
     <!-- versión escritorio -->
-    <div class="menu-principal" id="menu-principal">
-      <a href="#" class="menu-logo">
-        <img src="./img/sefaa-logo.png" alt="SEFAA">
+    <div class="menu-principal" id="home">
+      <a href="#home" class="menu-logo scroll-suave">
+        <img src="./img/logo.png" alt="SEFAA">
       </a>
       <nav>
         <ul class="menu-nav">
-          <a href="#">
+          <a href="#home" class="scroll-suave">
             <li>Inicio</li>
           </a>
-          <a href="#servicios">
-            <li>Servicios</li>
+          <a href="#proyectos" class="scroll-suave">
+            <li>Proyectos</li>
           </a>
-          <a href="#comercializacion">
-            <li>Comercialización</li>
+          <a href="#acercaDe" class="scroll-acercaDe">
+            <li>Acerca de</li>
           </a>
-          <a href="#nosotros">
-            <li>Nosotros</li>
+          <a href="#equipo" class="scroll-suave">
+            <li>Nuestro Equipo</li>
           </a>
-          <a href="#contacto">
+          <a href="#contacto" class="scroll-suave">
             <li>Contacto</li>
           </a>
         </ul>
@@ -80,25 +85,25 @@
     </div>
 
     <!-- versión clon -->
-    <div class="menu-clon" id="menu-clon">
-      <a href="#" class="menu-logo">
-        <img src="./img/sefaa-logo.png" alt="SEFAA">
+    <div class="menu-clon" id="menuClon">
+      <a href="#home" class="menu-logo scroll-suave">
+        <img src="./img/logo.png" alt="SEFAA">
       </a>
       <nav>
         <ul class="menu-nav">
-          <a href="#">
+          <a href="#home" class="scroll-suave">
             <li>Inicio</li>
           </a>
-          <a href="#servicios">
-            <li>Servicios</li>
+          <a href="#proyectos" class="scroll-suave">
+            <li>Proyectos</li>
           </a>
-          <a href="#comercializacion">
-            <li>Comercialización</li>
+          <a href="#acercaDe" class="scroll-acercaDe">
+            <li>Acerca de</li>
           </a>
-          <a href="#nosotros">
-            <li>Nosotros</li>
+          <a href="#equipo" class="scroll-suave">
+            <li>Nuestro Equipo</li>
           </a>
-          <a href="#contacto">
+          <a href="#contacto" class="scroll-suave">
             <li>Contacto</li>
           </a>
         </ul>
@@ -111,14 +116,16 @@
       </div>
     </div>
   </header>
-  <section class="main">
+  <section class="main" id="#home">
     <section class="banner-principal">
       <div class="banner" id="banner"></div>
       <div class="texto-banner">
         <h2>mejores productos, mejores cosechas.</h2>
         <h1>SEFAA</h1>
         <h3>Servicios Financieros Agrícolas y Ambientales</h3>
-        <a href="#proyectos" class="scroll-suave">ver casos de éxito</a>
+        <div class="link-banner flex">
+          <a href="#proyectos" class="scroll-suave">ver casos de éxito</a>
+        </div>
       </div>
     </section>
     <section class="proyectos" id="proyectos">
@@ -137,7 +144,7 @@
         </div>
       </div>
     </section>
-    <section class="nosotros" id="nosotros">
+    <section class="nosotros" id="acercaDe">
       <div class="container flex">
         <div class="titulo-seccion">
           <h2>Nosotros</h2>
@@ -155,7 +162,7 @@
         </div>
       </div>
     </section>
-    <section class="contenedor-slider">
+    <section class="contenedor-slider" id="slider">
       <div class="slider flex">
         <div class="slide">
           <img src="./img/proyectos/cacao.jpg" alt="slide">
@@ -173,7 +180,7 @@
       <div class="btn-anterior" id="btnAnterior"><i class="fas fa-arrow-left"></i></div>
       <div class="btn-siguiente" id="btnSiguiente"><i class="fas fa-arrow-right"></i></div>
     </section>
-    <section class="nuestro-equipo">
+    <section class="nuestro-equipo" id="equipo">
       <div class="container">
         <div class="titulo-seccion">
           <h2>Nuestro Equipo</h2>
@@ -210,7 +217,69 @@
         </div>
       </div>
     </section>
+    <section class="info-extra" id="extra">
+      <div class="container">
+        <div class="info">
+          <div class="contenido-info flex">
+            <div class="icono-info">
+              <i class="fas fa-seedling"></i>
+            </div>
+            <div class="texto-info">
+              <h4>Producimos las mejores cosechas de la región</h4>
+              <p>Como profesionales competentes durante más de 10 años de experiencia hemos optimizado la mejor
+                producción con el menor costo posible, de calidad, orgánica y sin contaminar el medio ambiente.</p>
+            </div>
+          </div>
+          <div class="contenido-info flex">
+            <div class="icono-info">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="texto-info">
+              <h4>Brindamos capacitación de alto impacto</h4>
+              <p>Somos especialistas con más de 10 años de experiencia en asesoramiento agrícola y financiera para
+                ayudarte a crecer el mundo competitivo de la agrícultura con productos de matería prima y procesados
+                para que pueda comercializar en distintos mercados de la región, la capital e internacional.</p>
+            </div>
+          </div>
+        </div>
+        <div class="photo"></div>
+      </div>
+    </section>
+    <section class="contacto" id="contacto">
+      <div class="container">
+        <div class="container-contacto flex">
+          <div class="form">
+            <h2>Cuéntamos sobre tu proyecto</h2>
+            <p>Estamos dispuestos a contactarte a la brevedad posible para brindarte la mejor asesoria.</p>
+            <form action="">
+              <div class=""><input type="text" id="name" placeholder="Ingresar tu nombre y apellidos"></div>
+              <div class=""><input type="email" id="email" placeholder="Ingresa tu email"></div>
+              <div class=""><textarea name="" id="" cols="10" rows="5" id="message"
+                  placeholder="Ingresa tu mensaje"></textarea></div>
+              <div class=""><input type="submit" id="submit" value="Enviar"></div>
+            </form>
+          </div>
+          <div class="contacto-photo"></div>
+        </div>
+      </div>
+    </section>
   </section>
+  <footer class="text-center">
+    <div class="footer-texto">
+      <p>Todos los derechos reservados</p>
+    </div>
+    <div class="footer-icons">
+      <a href=""><i class="fab fa-facebook-f"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+      <a href=""><i class="fab fa-youtube"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
+    </div>
+  </footer>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/showHeader.js"></script>
+  <script src="./js/showMenuClon.js"></script>
+  <script src="./js/scrollSuave.js"></script>
+  <script src="./js/showMenuMovil.js"></script>
 </body>
 
 </html>
