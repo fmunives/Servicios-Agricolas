@@ -847,7 +847,12 @@ footer {
   .texto-banner h1 {
     font-size: 4rem;
     letter-spacing: 20px;
+    margin-top: 100px;
     /* margin-right: -40px; */
+  }
+
+  .texto-banner h2 {
+    margin-top: 0;
   }
   .texto-banner h3 {
     letter-spacing: 2px;
